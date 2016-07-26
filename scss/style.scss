@@ -1,0 +1,359 @@
+/*---------------------*/
+/*   1. Reset styles
+/*---------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+// ul, li { list-style: none; }
+
+a { text-decoration: none; }
+
+/*-------Home_page--------*/
+
+/*basic-color*/
+$breez: #5897a9;
+$light_breez: #6fb9ce;
+$orange: #ff9242;
+a:hover{ color: $orange; }
+/**/
+.pos-relat { position: relative; }
+
+.menu {
+  height: auto;
+  @media screen and (max-width: 460px){ 
+    height: 80px;
+  }
+}
+
+.hide-content {
+  @media screen and (max-width:990px) {
+    display:  none;
+    
+  }
+}
+
+.block-link {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  @media screen and (max-width: 460px){
+    bottom: -55px;
+  }
+}
+
+.header-mobile-logo {
+  display: none;
+  @media screen and (max-width: 495px){
+    padding: 10px 0 0 2px;
+     display: block;
+  }
+}
+
+.header-desctop-logo {
+  display: block;
+  @media screen and (max-width: 495px){
+    display: none;
+  }
+}
+
+.block-link_content {
+  padding: 0 10px;
+  display: inline-block;
+  color: $breez;
+  font-size: 20px;
+
+  a { font-weight: bold; }
+
+}
+
+.menu-block { 
+  padding-top: 20px;
+  width: 220px; 
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+  @media screen and (max-width: 520px) {
+    width: auto;
+  }
+  @media screen and (max-width: 495px){
+    padding-top: 10px;
+  }
+  @media screen and (max-width: 460px){
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.frg_pass {
+  padding-top: 11px;
+  font-size: 12px;
+  @media screen and (max-width: 520px){
+    padding-right: 5px;
+
+  }
+  @media screen and (max-width: 460px){
+    margin-top: 45px;
+    padding-left: 5px;
+  } 
+}
+
+.anixon-button {
+  padding: 7px 20px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.button-description {
+  display: block;
+  background: -webkit-linear-gradient(top, #89c6d8, #617786);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 1px 0;
+  height: 28px;
+  padding: 5px 15px;
+
+  &:hover {
+    background: -webkit-linear-gradient(top, #89d0e7, #4f7263);
+  }
+}
+
+.header-buttons-register {
+  display: block;
+  background: -webkit-linear-gradient(top, #ff9645 0%, #e56508 100%);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  
+  &:hover {
+    background: -webkit-linear-gradient(top, #fcc01f 0%, #b74f01 100%);
+  }
+}
+
+.header-buttons-login {
+  display: block;
+  background: -webkit-linear-gradient(top, #89c6d8, #617786);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+  &:hover {
+    background: -webkit-linear-gradient(top, #89d0e7, #4f7263);
+  }
+}
+
+/*--Home image--*/
+
+.basic-description-bg {
+  max-width: 100%;
+  height: 345px;
+  margin: 0 auto;
+  background: url("../images/home-bg.png") center bottom no-repeat;
+  background-size: 100%;
+  margin-top: 0;
+
+  @media screen and (max-width: 990px) {
+    background-size: inherit;
+    background-position: 20% 20%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+
+  @media screen and (max-width: 460px) {
+    margin-top: 40px; 
+  }
+}
+
+.basic-description-content {  
+  width: 50%;
+  
+  .basic-decoration-center {
+    margin-left: 10%;
+    @media screen and (max-width: 990px) {
+    ul {
+      padding-left: 0;
+      text-align: justify;
+    }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;  
+    }
+
+      
+    }
+  }
+
+  .basic-description-list {
+      list-style-image: url("../images/tick-960.png");
+      padding-top: 15px;
+      padding-left: 20%;
+      @media screen and (max-width: 990px) {
+      display: inline-block;
+      }
+
+      li { 
+        padding-top: 5px;
+        color: gray;
+        font-weight: bold;
+        
+      }
+  }
+  .anixon-button {
+    padding: 7px 10px; 
+    display: inline-block;
+    &:hover { 
+      text-decoration: none; 
+      color: white;
+    }
+    @media screen and (max-width: 990px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 990px)  {
+    width: 100%;
+  } 
+}
+
+.basic-description-title {
+  font-size: 29px;
+  padding: 15px 0px 0px 20px;
+
+  h1 { 
+    font-weight: bold;
+    color: $breez;
+    animation: color 5s linear infinite;
+    @keyframes color {
+      from{
+        color: $orange;
+      }
+      33% {
+        color: white;
+      }  
+      66% {
+        color: skyblue;
+      }
+      to {
+        color: $orange;
+      }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+.basic-description-button {
+
+  padding-top: 20px;
+    padding-left: 25%;
+
+  
+
+  @media screen and (max-width: 990px) {
+    padding-top: 10px;
+    text-align: none;
+    padding-left: 15%; 
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 0%;
+    text-align: center; 
+  }
+}
+
+.block-padding-1{
+  padding: 5px 0;
+}
+
+.menu-download {
+  height: 40px;
+  background-color: #D3ECF1;
+  padding: 5px 0;
+}
+
+.title-os {
+  color: rgba(51, 122, 183, 0.53);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 0;
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
+}
+
+.win-icon {
+  display: inline-block;
+  background-image: url("../images/windows.png");
+  width: 20px;
+  height: 21px;
+  background-size: cover;
+
+  &:hover {
+    background-image: url("../images/windows-orange.png");
+    cursor: pointer; 
+  }
+}
+
+.mac-icon {
+  display: inline-block;
+  background-image: url("../images/icon-osx.png");
+  width: 31px;
+  height: 31px;
+  background-size: cover;
+
+  &:hover {
+    background-image: url("../images/icon-osx-orange.png");
+    cursor: pointer;    
+  }
+}
+
+.linux-icon {
+  display: inline-block;
+  background-image: url("../images/linux-platform.png");
+  width: 31px;
+  height: 31px;
+  background-size: cover;
+
+  &:hover {
+    background-image: url("../images/linux-platform-orange.png");
+    cursor: pointer;   
+  }
+}
+
