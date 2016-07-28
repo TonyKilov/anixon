@@ -32,15 +32,14 @@ time, mark, audio, video {
   }
 }
 
-.padding-none {
-  padding: 0;
-}
+.padding-none {  padding: 0;}
+@-ms-viewport { width: device-width; };
 // ul, li { list-style: none; }
 
 a { text-decoration: none; }
 
 /*-------Home_page--------*/
-
+ 
 /*basic-color*/
 $breez: #5897a9;
 $light_breez: #6fb9ce;
@@ -146,7 +145,7 @@ a:hover{ color: $orange; }
 .button-description {
   display: block;
   background: -ms-linear-gradient(top, #89c6d8, #617786);
-  background: -web-linear-gradient(top, #89c6d8, #617786);
+  background: -webkit-linear-gradient(top, #89c6d8, #617786);
   background: -moz-linear-gradient(top, #89c6d8, #617786);
   background: linear-gradient(top, #89c6d8, #617786);
   text-decoration: none;
@@ -158,7 +157,7 @@ a:hover{ color: $orange; }
 
   &:hover {
     background: -ms-linear-gradient(top, #89d0e7, #4f7263);
-  	background: -web-linear-gradient(top, #89d0e7, #4f7263);
+  	background: -webkit-linear-gradient(top, #89d0e7, #4f7263);
   	background: -moz-linear-gradient(top, #89d0e7, #4f7263);
     background: linear-gradient(top, #89d0e7, #4f7263);
   }
@@ -313,8 +312,6 @@ a:hover{ color: $orange; }
   padding-top: 20px;
     padding-left: 25%;
 
-  
-
   @media screen and (max-width: 990px) {
     padding-top: 10px;
     text-align: none;
@@ -345,6 +342,7 @@ a:hover{ color: $orange; }
     display: none;
   }
 }
+
 
 .win-icon {
   display: inline-block;
@@ -384,6 +382,7 @@ a:hover{ color: $orange; }
 
 .dropdown-menu {
   li {
+  	position: static;
     text-align: center;
   }
 }
@@ -403,24 +402,45 @@ a:hover{ color: $orange; }
 }
 
 .bgc-menu {
-  background-color: #d3ecf1;
+	background-color: #d3ecf1;
 
-  li{
-    &:hover{
-    background-color: #d3ecf1;
-    text-decoration: underline;
-    color: $orange; 
-      }
-    a {&:hover{color:$orange;}}
-    }
+	li{
+	    &:hover{
+		    background-color: #d3ecf1;
+		    text-decoration: underline;
+		    color: $orange; 
+		}
+	    a {
+	    	&:hover{color:$orange;}
+	    }
+	}
 }
 
 // Basic content info
-
+.block-infomation {
+	-webkit-border-bottom: 2px solid #b4d2da;
+	-o-border-bottom: 2px solid #b4d2da;
+	-moz-border-bottom: 2px solid #b4d2da;
+	-ms-border-bottom: 2px solid #b4d2da;
+	border-bottom: 2px solid #b4d2da;  
+	border-bottom: 2px solid #b4d2da;
+ 	@media screen and (max-width:990px){
+ 	 border-bottom: none;
+ 	} 
+}
 .basic-bgc { background-color: #f1f9fb; }
 
 .block-why {
   margin: 15px 0;
+  .block-information {
+  	@media screen and (max-width:990px) {
+  		-webkit-border-bottom: 2px solid #b4d2da;
+  		-o-border-bottom: 2px solid #b4d2da;
+  		-moz-border-bottom: 2px solid #b4d2da;
+  		-ms-border-bottom: 2px solid #b4d2da;
+  		border-bottom: 2px solid #b4d2da;  		
+  	}
+  }
 }
 
 .block-why-img {
@@ -441,4 +461,97 @@ a:hover{ color: $orange; }
   color: $orange;
 }
 
-.block-fntxt { font-size: 12px; color: #7f96a2; margin: 10px 0; }
+.block-img-hvr{ opacity: 0;}
+.block-fntxt { 
+  font-size: 12px;
+  color: #7f96a2; 
+  margin: 10px 0; 
+}
+
+// img description
+
+.img-description {margin: 25px 0; }
+
+.block-img-hvr { 
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 97%;
+}
+
+.block-img {
+  margin: 0 auto;
+  width: 225px;
+	position: relative;
+      &:hover{
+    
+      .block-img-hvr{
+        border-radius: 10px;
+        background-color: rgba(61,61,61,0.8);
+        color: white;
+        opacity: 1;
+        }  
+      }
+}
+
+.block-img-hvr__title {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 35px;
+  display: block;
+}
+.block-img-hvr__txt {
+  font-size: 14px;
+  color: #e0ffff;
+  padding: 0 15px;
+  display: block;
+  width: 100%;
+}
+
+.block__description {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 0;
+  color: #639eaf;
+}
+.bx-wrapper .bx-viewport {
+  
+  box-sizing: border-box;
+  box-shadow:none;
+  height: auto;
+  background: none;
+  border: none;
+  left: 0;
+  height: auto !important;
+}
+
+.bx-wrapper .bx-controls-auto {
+    text-align: center;
+    display: none;
+}
+
+.bxslideer_newspapewimg {
+  img{
+  position: absolute;
+  z-index: 1;
+  background-size: contain;
+  }
+}
+.bxslider_title {
+  font-weight: bold;
+  font-size: 16px;
+  color: $orange;
+  padding-top: 25px;
+  left: 100px;
+  position: relative;
+}
+
+.bxslider_txt {
+  margin-top: 80px;
+  position: absolute;
+  width: 75%;
+}
