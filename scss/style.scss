@@ -32,6 +32,12 @@ time, mark, audio, video {
   }
 }
 
+.dsp-none { 
+    @media screen and (max-width:1024px) 
+    {
+    display: none; 
+  }
+}
 .padding-none {  padding: 0;}
 @-ms-viewport { width: device-width; };
 // ul, li { list-style: none; }
@@ -485,10 +491,19 @@ a:hover{ color: $orange; }
   margin: 0 auto;
   width: 225px;
 	position: relative;
-      &:hover{
+      &:hover,
+      &:active,
+      &:focus{
     
       .block-img-hvr{
+        -o-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
         border-radius: 10px;
+        
+        -o-background-color: rgba(61,61,61,0.8);
+        -moz-background-color: rgba(61,61,61,0.8);
+        -webkit-background-color: rgba(61,61,61,0.8);
         background-color: rgba(61,61,61,0.8);
         color: white;
         opacity: 1;
@@ -543,11 +558,12 @@ a:hover{ color: $orange; }
 }
 .bxslider_title {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   color: $orange;
   padding-top: 25px;
   left: 100px;
   position: relative;
+  display: inline-block;
 }
 
 .bxslider_txt {
@@ -555,3 +571,39 @@ a:hover{ color: $orange; }
   position: absolute;
   width: 75%;
 }
+
+.time-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: $orange;
+  padding-top: 25px;
+}
+
+.time {
+  padding: 0;
+}
+
+.time-txt {
+  color: #7f96a2;
+  font-size: 12px;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+.time-clock{
+  display: block;
+  background: url("../images/timer.png") center bottom no-repeat;
+  width: 100%;
+  height: 300px;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.footer {
+  background-color: #fff2e9;
+  padding: 25px 10px;
+}
+
+.menu-download-ft{ margin-bottom: 20px; }
+.copyright {  font-size: 11px; }
