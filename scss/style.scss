@@ -32,14 +32,25 @@ time, mark, audio, video {
   }
 }
 
+
+.txt-md {
+  text-align: justify;
+  @media screen and (max-width: 770px) {
+    text-align: center;  
+  }
+}
 .dsp-none { 
     @media screen and (max-width:1024px) 
     {
     display: none; 
   }
 }
+
+.dsp-none-720px{
+  display: none;
+}
 .padding-none {  padding: 0;}
-@-ms-viewport { width: device-width; };
+@-ms-viewport { width: device-width;}; 
 // ul, li { list-style: none; }
 
 a { text-decoration: none; }
@@ -56,8 +67,16 @@ a:hover{ color: $orange; }
 
 .menu {
   height: auto;
+  background: white;
   @media screen and (max-width: 460px){ 
-    height: 80px;
+     @media screen and (max-width: 460px) {
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(100, #f1f9fb));
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #f1f9fb 100%);
+  }
   }
 }
 
@@ -126,6 +145,8 @@ a:hover{ color: $orange; }
     width: 100%;
   }
 }
+
+.menu-block_project {}
 
 .frg_pass {
   padding-top: 11px;
@@ -495,7 +516,7 @@ a:hover{ color: $orange; }
       &:active,
       &:focus{
     
-      .block-img-hvr{
+      .block-img-hvr {
         -o-border-radius: 10px;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -588,6 +609,9 @@ a:hover{ color: $orange; }
   font-size: 12px;
   margin-bottom: 15px;
   margin-top: 40px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #b4d2da;
+
 }
 
 .time-clock{
@@ -606,4 +630,479 @@ a:hover{ color: $orange; }
 }
 
 .menu-download-ft{ margin-bottom: 20px; }
-.copyright {  font-size: 11px; }
+.copyright {  
+  font-size: 11px;
+  padding: 10px 0;
+  @media screen and (max-width: 770px) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.copyright-txt { 
+  display: block; 
+  @media screen and (max-width: 770px) {
+  display:none; 
+  } 
+}
+
+.footer-logo {
+  background: url("../images/logo-small.png") bottom left no-repeat;
+  height: 50px;
+  display: block;
+  @media screen and (max-width: 770px) {
+    width: 130px;
+    margin: 0 auto;
+  }
+}
+
+
+
+// Page project list
+.menu-block-bgc {
+  padding: 10px;
+  background-color: $orange;
+  width: 280px;
+}
+
+.user_avatar {
+  left: 0;
+    img {
+      border-radius: 50%;
+      position: absolute;
+      width: 100px;
+      left: -113px;
+      top: -15px;
+      border: 1px solid $orange;
+      &:hover {
+        & ~ .img-hover { display: block; }
+      }
+    }
+}
+
+.img-hover {
+    display: none;
+    left: -113px;
+    top: -15px;
+    position: absolute;
+    background: rgba(61,61,61,0.8) url("../images/pencil.png") center no-repeat;
+    background-color: rgba(61,61,61,0.8);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user_info{
+  left: 40px;
+  position: relative;
+  margin: 5px 1 5px;
+}
+
+.user_name {
+  font-size: 14px;
+}
+
+.user_project {
+  font-size: 12px;
+}
+
+.user_edit {
+  display: inline-block;
+  /* width: 15px; */
+  background: url("../images/pencil.png") center no-repeat;
+  height: 100px;
+  /* position: relative; */
+  top: -11px;
+  margin-left: -26px;
+}
+
+.block-link_prfcontent {
+  padding: 0 10px;
+  display: inline-block;
+  color: $breez;
+  font-size: 15px;
+  @media screen and (max-width: 991px) {
+    font-size: 12px;
+  }
+
+  a { 
+    font-weight: bold;
+    &:hover{
+      color: $orange;
+      @media screen and (max-width: 720px) {
+       color: white;
+      }
+    }
+   }
+}
+
+.sidebar-menu {
+  display: none;
+  @media screen and (max-width: 720px) {
+    display: block;
+    width: 100%;
+    background-color: $orange;
+  }
+}
+
+.dsp-none-720px{
+  display: block;
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
+}
+
+.dsp-none-720in {
+  display: none;
+  @media screen and (max-width: 720px) {
+    display: block;
+    padding-left: 0;
+  }
+}
+
+.logout {
+  left: -20px;
+  position: relative;
+}
+
+.side-bar-style {
+  margin: 5px;
+  display: block;
+  font-size: 14px;  
+}
+
+.glyphicon {
+  padding-top: 5px;
+  margin-left:  25px;
+  margin-top:   10px;
+  color: #5897a9;
+  margin: 10px;
+}
+
+//project
+.project { position: relative; }
+.hleb-crosh { font-size:  10px; 
+  @media screen and (max-width: 460px) {
+    display: none;
+  }}
+
+.project_name {
+  padding: 15px 0 15px 15px;
+  font-size: 20px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-style: italic;
+}
+
+.button-project {
+  margin-top: 10px;
+  height: auto;
+  padding: 5px 4px;
+}
+
+.project_arhive {
+  width: 140px;
+  padding: 10px 5px;
+  @media screen and (max-width: 1200) {
+    padding: 5px;
+  }
+  @media screen and (max-width: 991px){
+    padding: 15px  5px;
+  }
+  @media screen and (max-width: 720px) {
+    padding: 5px 5px;
+  }
+  @media screen and (max-width: 565px) {
+    padding: 5px 1px;
+    width: 130px;
+  }
+  a {
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.project_new {
+  font-size: 12px;
+  margin-bottom: 5px;
+  a {
+    margin: 10px 0;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    &:hover{
+      color: $orange;
+      &:before{
+        background: url("../images/plus.png") center bottom no-repeat;
+        } 
+    }
+    &:before {
+      content: "";
+      width: 20px;
+      height: 18px;
+      display: inline-block;
+      background: url("../images/plus-dark.png") center bottom no-repeat;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}
+
+// menu
+.header-menu ul{
+  float: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+ .menu-line {
+  background: url("../image/menu-line.png");
+  height: 4px;
+}
+
+
+.header-menu li{
+    float:left;
+    position:relative;
+    display:block;
+}
+
+.header-menu li a{
+    display: block;
+    padding: 5px 15px;
+    color: #684747;
+    text-decoration: none;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+
+.header-menu li a:hover{
+    color: $orange;
+  text-decoration:underline;
+}
+
+
+.header-menu ul li{
+    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    float:none;
+}
+
+.header-menu li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+}
+
+.header-menu li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+ /* Выглядит полупрозрачным */
+    text-decoration:underline;
+}
+
+.header-menu li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    text-decoration:none;
+    -webkit-transition:-webkit-transform 0.075s linear;
+}
+
+.header-menu li:hover ul li a:hover{ 
+    text-decoration:underline;
+    -moz-transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+}
+
+
+.header-menu li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+    z-index: 1;
+}
+
+
+.header-submenu ul {
+  position: absolute;
+  display: none;
+  background: black;
+}
+.header-submenu ul li {
+  display: inline-block;
+  position: relative;
+  float: none;
+}
+.header-submenu:hover > ul { display: block; }
+
+.header-submenu > a:after {
+  content: "";
+  background: url("../image/flag.png") no-repeat;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  position: absolute;
+    top: 12px;
+    margin-left: 5px;
+}
+
+.header-submenu:hover > a:after{
+  content: "";
+  background: url("../image/flag.png") no-repeat;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  transform:rotate(180deg);
+  position: absolute;
+    top: 8px;
+    margin-left: 2px;
+}
+
+.header-submenu ul {
+  padding-right: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 720px){
+  .header-submenu { float: left; }
+
+  .header-menu ul{
+    float: none;
+    display: none;
+    z-index: 2;
+    background: #f1f9fb;
+    position: absolute;
+    top: 31px;
+    right: 0px;
+    width: 160px;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  .header-social {
+      padding: 10px 0px;
+      position: absolute;
+      right: 0;
+  }
+  
+}
+.header-menu {
+  @media screen and (max-width: 720px){
+      margin: 45px 20px;
+      background: url("../images/icon-house-black.png") no-repeat center;
+      height: 32px;
+      width: 32px;
+      padding: 12px 12px;
+      /* margin-left: 0px; */
+      position: absolute;
+      top: 0;
+      /* left: 10px; */
+      position: fixed;
+      z-index: 10;
+      cursor: pointer;
+      right: 0;
+      &:hover {
+        background: url("../images/icon-house-orange.png") no-repeat center;
+      }
+  }
+  @media screen and (max-width: 460px) {
+      margin: 22px 10px;
+  }
+}
+.border_bottom {
+  border-bottom: 1px solid black;
+}
+
+.project_block-container {
+  margin: 10px 0px;
+
+  a {
+    font-size: 22px;
+    color: #97aeb4;
+  }
+  @media screen and (max-width: 610px) {
+    width: 100%;
+  }
+}
+
+.project_block-content {
+  border: 1px solid $breez;
+  background: #d4e3e6;
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.data_start{
+  width: 50%;
+  padding: 5px 5px 10px 5px;
+  font-size: 12px;
+  color: #8ab0bb;
+}
+
+.hourse_online,
+.hourse_offline
+{
+  padding: 5px 10px;
+  font-size: 12px;
+  color: white;
+  font-weight: 200;
+}
+
+.hourse_online { background: $orange; }
+.hourse_offline { background: $light_breez; }
+
+header {
+  width: auto;
+  background-image: white;
+  @media screen and (max-width: 720px) {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-image: white;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 460px) {
+    border-bottom: 1px solid gray;
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(100, #f1f9fb));
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #f1f9fb 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #f1f9fb 100%);
+  }
+
+}
+
+body {
+  @media screen and (max-width: 720px){
+    padding-top: 130px;
+  }
+  @media screen and (max-width: 460px) {
+    padding-top: 60px;
+  }
+}
+
+.time_clock {
+
+  background: url("../images/clock-icon-blue.png") center no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+  &:hover {
+    background: url("../images/clock-icon.png") center no-repeat;
+  }
+}
+
+.project_user_info {
+  background: url("../images/default-avatar.png") center no-repeat;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.time_project { float:left; margin: 10px 0px 10px 0; }
+.hourse_online-offline { float:right; }

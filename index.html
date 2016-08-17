@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
 <link rel="shortcup icon" href="images/favicon.ico" type="image/x-icon">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
-<script src="js/hide.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
 <link rel="stylesheet" href="css/jquery.bxslider.css">
 <link rel="stylesheet" href="css/style.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+
+
 <title>Power tracker</title>
 </head>
 <body>
@@ -216,13 +216,13 @@
 				</div>
 
 				<div class="col-xs-12 col-md-6 ">
-					<div class="time-download">
+					<div class="time-download clearfix">
 						<div class="col-xs-12 col-md-12 col-lg-6  download-link padding-none">
 							<div class="bxslideer_newspapewimg"><img src="images/install.png" height="76" width="76" alt=""></div>
 							<div class="bxslider_title">Install client</div>
 							<div class="time-txt">Do not be confused by a variety of platforms and operating systems. Best tracker time tracking is working on Windows, Mac.</div>
 							
-							<div class="menu-download-ft">
+							<div class="menu-download-ft clearfix">
 								<div class="col-md-4 col-xs-4 dropdown text-center block-padding-1">
 									<a class="dropdown-toggle win-icon" type="button" data-toggle="dropdown"><span class="icon-degr glyphicon glyphicon-chevron-right"></span></a>
 									<ul class="dropdown-menu bgc-menu">
@@ -247,16 +247,22 @@
 
 	<!-- Footer -->
 	<div class="footer">
-		<div class="row">
-			<div class="container">
-				<div class="col-md-offset-8 pull-right">
-					<div class="col-md-3 copyright">All names and logos are registered trademarks.
-All Rights Reserved.
-© 2016 Power Tracker.</div>
-					<div class="col-md-3 "><a class="" href="#"></a></div>
+			<div class="row">
+				<div class="col-md-offset-6 col-xs-12 pull-right txt-md">
+					<div class="col-lg-2 col-xs-4 col-xs-offset-8 copyright text-left"><a class="footer-logo" href="#"></a><span class="copyright-txt">All names and logos are registered trademarks. All Rights Reserved. © 2016 Power Tracker.</span>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>	
+	</div>
+
+<script>
+	$(document).ready(function(){
+		$('.bxslider').bxSlider({
+  			auto: true,
+  			autoControls: true,
+  			autoStart: true,
+  		} );
+	});
+</script>	
 </body>
 </html>
