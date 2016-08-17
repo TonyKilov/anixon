@@ -1098,10 +1098,46 @@ body {
 }
 
 .project_user_info {
-  background: url("../images/default-avatar.png") center no-repeat;
+  background: url("../images/default-avatar.png") 50% no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+  border: 1px solid gray;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  &:hover + a {
+    color: $orange;
+
+  }
+  &:hover {
+    border: 2px solid $orange;
+  }
+}
+
+
+.project_user_activ {
+  
+  &:hover {
+  a {
+    &:hover{
+    color: $orange;
+  }
+
+  }
+}
+}
+
+.project_user_avatar {
+  margin: 15px 0; 
+}
+
+.project_user_avatar .user_name {
+  font-size: 12px;
   display: block;
-  width: 30px;
-  height: 30px;
+  &:hover {
+    color: $orange;
+    cursor: pointer;
+  }
 }
 
 .time_project { float:left; margin: 10px 0px 10px 0; }
