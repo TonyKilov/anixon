@@ -1,7 +1,14 @@
 $(document).ready(function(){
-  $('.bxslider').bxSlider({
-  	auto: true,
-  	autoControls: true,
-  	autoStart: true,
-  });
+
+
+
+	
+$(".header-menu").click(function(){
+		if($(".header-menu .container > ul").css('display') == "none"){
+			$(".header-menu .container > ul").show();
+		} else {
+			$(".header-menu .container > ul").hide();
+		}
+		
+	});
 });
